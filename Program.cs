@@ -1,12 +1,13 @@
 using Microsoft.EntityFrameworkCore;
-// using Sobremesa.Data;
+using Sobremesa.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-
+// Add DbContext and configure SQL Server
+builder.Services.AddDbContext<SobremesaContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Add Session Support
 builder.Services.AddSession();
 

@@ -1,0 +1,32 @@
+@model Sobremesa.Models.Usuario
+
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<div class="container mt-4">
+    <h1>Edit User</h1>
+    <form asp-controller="Users" asp-action="Edit" method="post">
+        <input type="hidden" name="UsuarioID" value="@Model.UsuarioID" />
+
+        <div class="form-group">
+            <label for="Nombre">Name</label>
+            <input type="text" class="form-control" id="Nombre" name="Nombre" value="@Model.Nombre" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Correo">Email</label>
+            <input type="email" class="form-control" id="Correo" name="Correo" value="@Model.Correo" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Rol">Role</label>
+            <select class="form-control" id="Rol" name="Rol" required>
+                <option value="Administrador" @(Model.Rol == "Administrador" ? "selected" : "")>Administrator</option>
+                <option value="Trabajador" @(Model.Rol == "Trabajador" ? "selected" : "")>Worker</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+    </form>
+</div>

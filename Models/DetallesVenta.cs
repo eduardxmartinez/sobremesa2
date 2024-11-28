@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Sobremesa;
-
+namespace Sobremesa.Models;
 public partial class DetallesVenta
 {
     public int DetalleId { get; set; }

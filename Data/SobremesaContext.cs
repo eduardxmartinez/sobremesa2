@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Sobremesa.Models;
 
-namespace Sobremesa;
+namespace Sobremesa.Data;
 
 public partial class SobremesaContext : DbContext
 {
@@ -72,11 +73,11 @@ public partial class SobremesaContext : DbContext
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.UsuarioId).HasName("PK__Usuarios__2B3DE7982301DC4F");
+            entity.HasKey(e => e.UsuarioID).HasName("PK__Usuarios__2B3DE7982301DC4F");
 
             entity.HasIndex(e => e.Correo, "UQ__Usuarios__60695A195B3BD012").IsUnique();
 
-            entity.Property(e => e.UsuarioId).HasColumnName("UsuarioID");
+            entity.Property(e => e.UsuarioID).HasColumnName("UsuarioID");
             entity.Property(e => e.Contraseña).HasMaxLength(255);
             entity.Property(e => e.Correo).HasMaxLength(100);
             entity.Property(e => e.Nombre).HasMaxLength(100);
