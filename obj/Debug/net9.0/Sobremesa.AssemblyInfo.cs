@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sobremesa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6e5d44ec05d8e81cc6e461c3106936a8f453d1a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sobremesa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sobremesa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
